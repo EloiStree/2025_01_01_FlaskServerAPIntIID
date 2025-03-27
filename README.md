@@ -69,3 +69,18 @@ sudo systemctl status apint_flask.service
 ```
 
 
+
+
+
+--------
+
+```
+crontab -e
+```
+
+```
+@reboot /usr/bin/lxterminal -e "/usr/bin/chromium-browser --no-sandbox "/git/apint_flask/www/trusted/RunClient.html" & /usr/bin/chromium-browser --no-sandbox "/git/apint_flask/www/asymmetric/RunClient.html" 
+```
+
+
+
