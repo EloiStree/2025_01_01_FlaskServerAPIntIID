@@ -64,11 +64,11 @@ def home():
 
 @app.route('/asym-client')
 def asym_client():
-    return render_template("www/asymmetric/client_index.html")
+    return render_template("www/asymmetric/RunClient.html")
 
 @app.route('/trusted-client')
 def trusted_client():
-    return render_template("www/trusted/client_index.html")
+    return render_template("www/trusted/RunClient.html")
 
 def redirect_to(url):
     return f'<html><head><meta http-equiv="refresh" content="0;url={url}" /></head><body></body></html>'
@@ -89,6 +89,18 @@ def donation():
 def source():
     return redirect_to("https://github.com/EloiStree/2025_01_01_FlaskServerAPIntIID.git")
 
+
+@app.route('/asym/rsa4096')
+def generate_rsa4096_key():
+    return render_template("www/asymmetric/GenerateRSA4096.html")
+
+@app.route('/asym/rsa512')
+def generate_rsa512_key():
+    return render_template("www/asymmetric/GenerateRSA512.html")
+
+@app.route('/asym/ecc')
+def generate_rsaecc_key():
+    return render_template("www/asymmetric/GenerateECC.html")
 
 @app.route('/rtfm')
 def rtfm():
