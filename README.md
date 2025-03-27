@@ -1,9 +1,8 @@
 `Raspberrypi.local:8080`
-[Service](http://raspberrypi.local:8080/services) | [Asym Client](http://raspberrypi.local:8080/asym-client) |
-[Trusted Client](http://raspberrypi.local:8080/trusted-client) | [NTP Offset](http://raspberrypi.local:8080/ntp) |
+[Service](http://raspberrypi.local:8080/services) | [Asym Client](http://raspberrypi.local:8080/asym-client) [C](https://github.com/EloiStree/2025_01_01_AsymmetricServerAPIntIID) |
+[Trusted Client](http://raspberrypi.local:8080/trusted-client) [C](https://github.com/EloiStree/2025_01_01_TrustedServerAPIntIID)| [NTP Offset](http://raspberrypi.local:8080/ntp) [C](https://github.com/EloiStree/2025_01_01_HelloPiOsNtpServer)|
 [IPV4](http://raspberrypi.local:8080/ipv4) | [Trusted Push IID](http://raspberrypi.local:8080/push_iid) |
 [Reboot](http://raspberrypi.local:8080/reboot)  
-
 -------------
 
 # Flask Server APInt IID
