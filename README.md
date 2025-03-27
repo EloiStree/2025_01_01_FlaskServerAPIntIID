@@ -3,6 +3,15 @@
 A Flask Landing page for the Raspberry Pi that host some IID APInt feature and servers.
 
 
+Check your Pi:
+[Service](http://raspberrypi.local:8080/services) |
+[Asym Client](http://raspberrypi.local:8080/asym-client) |
+[Trusted Client](http://raspberrypi.local:8080/trusted-client) |  
+[NTP Offset](http://raspberrypi.local:8080/ntp) |  
+[IPV4](http://raspberrypi.local:8080/ipv4) |  
+[Trusted Push IID](http://raspberrypi.local:8080/push_iid) |  
+[Reboot](http://raspberrypi.local:8080/reboot)    
+
 ```
 git clone https://github.com/EloiStree/2025_01_01_FlaskServerAPIntIID.git /git/apint_flask
 ```
