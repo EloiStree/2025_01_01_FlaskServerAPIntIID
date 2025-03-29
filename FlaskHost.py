@@ -160,12 +160,26 @@ def services_route():
 
 
 
+
+
+def get_raspberry_pi_serial():
+    try:
+        with open("/proc/cpuinfo", "r") as f:
+            for line in f:
+                if line.startswith("Serial"):
+                    return line.split(":")[1].strip()
+    except Exception as e:
+        print(f"Error reading serial: {e}")
+    return os.popen("hostname").read().strip()
+
+
 import os
 hostname=""
 hostname_ip=""
 hostname_ips=""
+hostname_unique_id=""
 def refresh_hostname():
-    global hostname_ip, hostname, hostname_ips
+    global hostname_ip, hostname, hostname_ips, hostname_unique_id
     if hostname_ip==None or hostname_ip=="":
         hostname_ips = os.popen("hostname -I").read().strip()
         hostname = os.popen("hostname").read().strip()
@@ -175,6 +189,8 @@ def refresh_hostname():
             if "." in ip:  
                 stack+= ip+"\n"
         hostname_ip=stack
+        hostname_unique_id = get_raspberry_pi_serial()
+        
           
 @app.route('/ipv4')
 def get_local_ipv4():
@@ -193,6 +209,12 @@ def get_local_hostname():
     global  hostname
     refresh_hostname()
     return hostname
+
+@app.route('/unique-id')
+def get_unique_id():
+    global hostname_unique_id
+    refresh_hostname()
+    return hostname_unique_id
 
 
 

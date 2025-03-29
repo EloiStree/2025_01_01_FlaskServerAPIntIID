@@ -1,0 +1,10 @@
+[Unit]
+Description=APIntIO Push IID Timer
+
+[Timer]
+OnBootSec=0min
+OnUnitActiveSec=10s
+
+[Install]
+WantedBy=timers.target
+
