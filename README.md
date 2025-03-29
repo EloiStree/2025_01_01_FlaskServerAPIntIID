@@ -1,6 +1,6 @@
 `Raspberrypi.local:8080`
-[Service](http://raspberrypi.local:8080/services) | [Asym Client](http://raspberrypi.local:8080/asym-client) |
-[Trusted Client](http://raspberrypi.local:8080/trusted-client) | [NTP Offset](http://raspberrypi.local:8080/ntp) |
+[Service](http://raspberrypi.local:8080/services) | [Asym Client](http://raspberrypi.local:8080/asym-client) [C](https://github.com/EloiStree/2025_01_01_AsymmetricServerAPIntIID) |
+[Trusted Client](http://raspberrypi.local:8080/trusted-client) [C](https://github.com/EloiStree/2025_01_01_TrustedServerAPIntIID) | [NTP Offset](http://raspberrypi.local:8080/ntp) [C](https://github.com/EloiStree/2025_01_01_HelloPiOsNtpServer) |
 [IPV4](http://raspberrypi.local:8080/ipv4) | [Trusted Push IID](http://raspberrypi.local:8080/push_iid) |
 [Reboot](http://raspberrypi.local:8080/reboot)  
 
@@ -67,5 +67,20 @@ sudo systemctl restart apint_flask.service
 
 sudo systemctl status apint_flask.service
 ```
+
+
+
+
+
+--------
+
+```
+crontab -e
+```
+
+```
+@reboot /usr/bin/lxterminal -e "/usr/bin/chromium-browser --no-sandbox "/git/apint_flask/www/trusted/RunClient.html" & /usr/bin/chromium-browser --no-sandbox "/git/apint_flask/www/asymmetric/RunClient.html" 
+```
+
 
 
