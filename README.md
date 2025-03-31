@@ -11,7 +11,9 @@
 A Flask Landing page for the Raspberry Pi that host some IID APInt feature and servers.
 
 
-
+```
+pip install flask markdown --break-system-packages
+```
 
 ```
 git clone https://github.com/EloiStree/2025_01_01_FlaskServerAPIntIID.git /git/apint_flask
