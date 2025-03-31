@@ -12,7 +12,7 @@ A Flask Landing page for the Raspberry Pi that host some IID APInt feature and s
 
 
 ```
-pip install flask markdown --break-system-packages
+pip install ntplib flask markdown --break-system-packages
 ```
 
 ```
