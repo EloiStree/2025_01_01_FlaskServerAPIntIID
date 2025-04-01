@@ -115,7 +115,7 @@
             if (!isNaN(number)) {
                 sendInteger(number);
             } 
-
+        }
 
         document.addEventListener("DOMContentLoaded", function () {
             
@@ -151,11 +151,74 @@
 <p id="ReceivedIID_Ping">Ping</p>
 
 <div>
+    <div></div>
     <h2>Enter an Integer</h2>
     <form id="numberForm" onsubmit="return false;">
         <input type="number" id="numberInput" required>
         <button type="button" onclick="pushIntegerForm()">Submit</button>
-    </form></div>
+    </form>
+    </div>
+
+    <h1>Space Ship</h1>
+    <div>
+        <button data-value="101">
+            Load Game 101</button>
+        <button data-value="201">
+            Load Game Over</button>
+        <button data-value="301">
+            Load Wait Lobby</button>
+        <br/>
+        <button data-value="102">Shield on 102</button>
+        <button data-value="202">Shield off 202</button> 
+        <br/>
+        <button data-value="103">Alarm on 103</button>
+        <button data-value="203">Alarm off 203</button>
+        <br/>
+
+        <button data-value="108">
+            Turn Light On</button>
+            <button data-value="208">
+                Turn Light Off</button>
+                <button data-value="308">
+                    Switch Light </button>
+                    <br/>
+                    <br/>Set  Game Time:
+                    <button data-value="600">Restart Timer to Now</button>
+                    <button data-value="601">1 minutes</button>
+                    <button data-value="602">2 minutes</button>
+                    <button data-value="603">3 minutes</button>
+                    <button data-value="604">4 minutes</button>
+                    <button data-value="605">5 minutes</button>
+                    <button data-value="606">6 minutes</button>
+                    <button data-value="607">7 minutes</button>
+                    <button data-value="608">8 minutes</button>
+                    <button data-value="609">9 minutes</button>
+                    <button data-value="610">10 minutes</button> <br/>
+                    Add Seconds to Start Time: 
+                    <button data-value="620">Add 5  </button>
+                    <button data-value="621">Add 10 </button>
+                    <button data-value="622">Add 20 </button>
+                    <button data-value="623">Add 30 </button>
+                    <button data-value="624">Add 40 </button>
+                    <button data-value="625">Add 50 </button>
+                    <button data-value="626">Add 60 </button>
+                   
+                    <br/>
+     <!-- Color Controls -->
+     <button data-value="700">Color Red</button>
+     <button data-value="701">Color Green</button>
+     <button data-value="702">Color Blue</button>
+     <button data-value="703">Color Orange</button>
+     <button data-value="704">Color Yellow</button>
+     <button data-value="705">Color Purple</button>
+     <button data-value="706">Color Pink</button>
+     <button data-value="707">Color Cyan</button>
+     <button data-value="708">Color White</button>
+     <br/>
+     <br/>
+     
+    </div>    
+    <h1>Debug</h1>        
     <div>
         <button data-value="0">Send 0</button>
         <button data-value="1">Send 1</button>
@@ -166,13 +229,6 @@
     </div>
 
     <div><br/>
-        <button data-value="101">Start 101</button>
-        <button data-value="201">Stop 201</button><br/>
-        <button data-value="301">Selection Menu 301</button><br/>
-        <button data-value="102">Shield on 102</button>
-        <button data-value="202">Shield off 202</button>
-        <button data-value="103">Alarm on 103</button>
-        <button data-value="203">Alarm off 203</button>
         <button data-value="104">Air Leak on 104</button>
         <button data-value="204">Air Leak off 204</button><br/>
         <button data-value="305">Big Asteroid hit 305</button>
@@ -181,25 +237,9 @@
         <button data-value="306">Pipe Break hit 306</button>
         <button data-value="307">Motor in Fire hit 307</button><br/>
 
-        
-        <br/>
-        <button data-value="108">Light On 108</button>
-        <button data-value="208">Light Off 208</button>
-        <button data-value="308">Light Switch 308</button>
                 
         <br/>
-        <!-- Color Controls -->
-        <button data-value="700">Color Red</button>
-        <button data-value="701">Color Green</button>
-        <button data-value="702">Color Blue</button>
-        <button data-value="703">Color Orange</button>
-        <button data-value="704">Color Yellow</button>
-        <button data-value="705">Color Purple</button>
-        <button data-value="706">Color Pink</button>
-        <button data-value="707">Color Cyan</button>
-        <button data-value="708">Color White</button>
-        <br/>
-        
+       
         <br/>
         <button data-value="7">Gandalf Sax 7</button>
         <button data-value="404">Rick Roll 404</button>
@@ -212,13 +252,7 @@
         <button data-value="504">Mission 4 Complete</button>
         <button data-value="505">Mission 5 Complete</button>
 
-        <br/>
-        <button data-value="601">Set Game Time to 1 minutes</button>
-        <button data-value="602">Set Game Time to 2 minutes</button>
-        <button data-value="603">Set Game Time to 3 minutes</button>
-        <button data-value="604">Set Game Time to 4 minutes</button>
-        <button data-value="605">Set Game Time to 5 minutes</button>
-        <button data-value="610">Set Game Time to 10 minutes</button>
+      
     
 
             <br/>
@@ -236,7 +270,9 @@
         <button data-value="720">Color Intensity 100%</button>
                 </div>
 
-        <h1>Test</h1>
+               
+
+                <h1>Test</h1>
         
        <div id="GRID">
        <button class="GRIDBUTTON"  data-value="20001" title="">✅ Approval & Completion (20001)</button>
@@ -366,8 +402,5 @@
         </div>
 
     <br/>
-    <div>
-    
-
 </body>
 </html>
