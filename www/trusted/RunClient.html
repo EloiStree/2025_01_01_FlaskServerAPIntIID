@@ -107,6 +107,14 @@
                 socket.send(message);
             } 
         }
+        
+        function pushIntegerForm() {
+            const inputElement = document.getElementById('numberInput');
+            const number = parseInt(inputElement.value, 10);
+            
+            if (!isNaN(number)) {
+                sendInteger(number);
+            } 
 
 
         document.addEventListener("DOMContentLoaded", function () {
@@ -142,7 +150,11 @@
 <p id="ReceivedIID_NTPOffset">Offset</p>
 <p id="ReceivedIID_Ping">Ping</p>
 
-
+    <h2>Enter an Integer</h2>
+    <form id="numberForm" onsubmit="return false;">
+        <input type="number" id="numberInput" required>
+        <button type="button" onclick="pushIntegerForm()">Submit</button>
+    </form>
     <div>
         <button data-value="0">Send 0</button>
         <button data-value="1">Send 1</button>
