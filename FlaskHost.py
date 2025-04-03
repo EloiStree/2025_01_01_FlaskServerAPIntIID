@@ -46,8 +46,13 @@ services = [
     "apint_udp_relay_iid.timer",
     "apint_flask.service",
     "apint_flask.timer",
-    "apint_client_pyjs.service",
-    "apint_client_pyjs.timer"
+    "apint_flask_api.service",
+    "apint_flask_api.timer",
+    "apint_bot_twitch.service",
+    "apint_bot_twitch.timer",
+    "apint_bot_discord.service",
+    "apint_bot_discord.timer",
+    
 ]
 
 def get_service_status(service):
